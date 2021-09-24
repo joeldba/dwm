@@ -72,15 +72,15 @@ static const char *colors[][3]      = {
 static const char *tags[] = { " web ", " chat ", " term ", " game ", " gfx ", " aud ", " vid ", " virt ", " misc " };
 
 static const char *tagsel[][2] = {
-	{ "#ff4151", "#0f111a" },
-	{ "#a3bebc", "#0f111a" },
-	{ "#ebcb8b", "#0f111a" },
-	{ "#81a1c1", "#0f111a" },
-	{ "#b48ead", "#0f111a" },
-	{ "#e5e9f0", "#0f111a" },
-	{ "#ebcb8b", "#0f111a" },
-	{ "#a3bebc", "#0f111a" },
-	{ "#ff4151", "#0f111a" },
+	{ "#ff4151", "#272931" },
+	{ "#a3bebc", "#272931" },
+	{ "#ebcb8b", "#272931" },
+	{ "#81a1c1", "#272931" },
+	{ "#b48ead", "#272931" },
+	{ "#e5e9f0", "#272931" },
+	{ "#ebcb8b", "#272931" },
+	{ "#a3bebc", "#272931" },
+	{ "#ff4151", "#272931" },
 };
 
 /* window rules */
@@ -104,20 +104,20 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "|   tile",       tile },    /* first entry is default */
- 	{ "|   monocle",    monocle },
-	{ "|   spiral",     spiral },
-	{ "|   dwindle",    dwindle },
-	{ "|   deck",       deck },
-	{ "|   bstack",     bstack },
-	{ "|   bshoriz",    bstackhoriz },
-	{ "|   grid",       grid },
-	{ "|   nrgrid",     nrowgrid },
-	{ "|   hgrid",      horizgrid },
-	{ "|   ggrid",      gaplessgrid },
-	{ "|   cmaster",    centeredmaster },
-	{ "|   cfmaster",   centeredfloatingmaster },
-	{ "|   float",      NULL },    /* no layout function means floating behavior */
+	{ "  tile",       tile },    /* first entry is default */
+ 	{ "  monocle",    monocle },
+	{ "  spiral",     spiral },
+	{ "  dwindle",    dwindle },
+	{ "  deck",       deck },
+	{ "  bstack",     bstack },
+	{ "  bshoriz",    bstackhoriz },
+	{ "  grid",       grid },
+	{ "  nrgrid",     nrowgrid },
+	{ "  hgrid",      horizgrid },
+	{ "  ggrid",      gaplessgrid },
+	{ "  cmaster",    centeredmaster },
+	{ "  cfmaster",   centeredfloatingmaster },
+	{ "  float",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -201,7 +201,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
 	{ MODKEY|ShiftMask,		XK_v,      spawn,	   {.v = cfgscript } },
 	{ MODKEY|ShiftMask,		XK_w,      spawn,	   {.v = webscript } },
-	{ MODKEY|ShiftMask,		XK_r,      spawn,	   {.v = helpcmd } },
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	TAGKEYS(                        XK_1,                      0)
@@ -213,8 +212,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {1} },
-	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {0} }, 
+	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask, 		XK_q,      quit,           {0} }, 
 };
 
 /* button definitions */

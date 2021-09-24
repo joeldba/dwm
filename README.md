@@ -106,7 +106,6 @@ However, if you wish to use the Super/Windows key instead, go to the key definit
 |Monocole layout|Mod+m|
 |Floating layout|Mod+f|
 |Show/hide scratchpad|Mod+s|
-|Show README file|Mod+Shift+R|
-|Restart dwm|Mod+Shift+Q|
-|Quit dwm|Mod+Shift+Ctrl+Q|
+|Restart dwm|Mod+Shift+R|
+|Quit dwm|Mod+Shift+Q|
 
