@@ -142,7 +142,6 @@ static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NUL
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL };
-static const char *helpcmd[] = { "st", "-ig", "128x44", "bat", "/home/rwt/.config/dwm/README.md", NULL };
 static const char *compon[]  = { "picom", "--experimental-backends", NULL };
 static const char *compoff[] = { "pkill", "picom", NULL };
 static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL };
