@@ -34,19 +34,19 @@ static const unsigned int ulinevoffset	= 2;	/* how far above the bottom of the b
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 /* colors */
-/* bg colors */
+/* background colors */
 static const char base0[]      	    = "#00010a";
 static const char base1[]      	    = "#0f111a";
 static const char base2[]      	    = "#272931";
 
-/* fg colors */
+/* foreground colors */
 static const char fg1[]       	    = "#3b4252";
 static const char fg2[]             = "#b48ead";
 static const char fg3[]             = "#81a1c1";
 static const char fg4[]             = "#e5e9f0";
 static const char col_borderbar[]   = "#0f111a";
 
-/* other colors */
+/* other colors (used in statusbar) */
 static const char red[]       	    = "#ff4151";
 static const char green[]           = "#a3bebc";
 static const char yellow[]          = "#ebcb8b";
@@ -80,8 +80,10 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
+/* tag chars */
 static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
+/* tag selection colors */
 static const char *tagsel[][2] = {
 	{ "#ff4151", "#272931" },
 	{ "#a3bebc", "#272931" },
@@ -146,26 +148,37 @@ static const Layout layouts[] = {
 
 /* command definitions */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
-static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL };
-static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL };
-static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL };
-static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL };
-static const char *compon[]  = { "picom", "--experimental-backends", NULL };
-static const char *compoff[] = { "pkill", "picom", NULL };
-static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL };
-static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL }; /* run prompt */
+static const char *termcmd[]  = { "st", NULL }; /* terminal */
+static const char scratchpadname[] = "scratchpad"; /* name of the scratchpad */
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL }; /* scratchpad */
+static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL }; /* power options menu */
+static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL }; /* screenshot-taking menu */
+static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL }; /* rudimentary mpd control menu */
+static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL }; /* favorite programs menu */
+static const char *compon[]  = { "picom", "--experimental-backends", NULL }; /* picom */
+static const char *compoff[] = { "pkill", "picom", NULL }; /* kill picom */
+static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL }; /* config file selection menu */
+static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", NULL }; /* favorite webpages menu */
 #include "movestack.c"
 
 /* key bindings */
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	/* program/command bindings */	
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
+	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
+	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
+	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
+	{ MODKEY|ShiftMask,		XK_v,      spawn,	   {.v = cfgscript } },
+	{ MODKEY|ShiftMask,		XK_w,      spawn,	   {.v = webscript } },
+	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
+	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,  	   togglescratch,  {.v = scratchpadcmd } },
+
+	/* window management */
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -179,10 +192,20 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+
+	/* gaps management */	
+	{ MODKEY,              		XK_equal,  incrigaps,      {.i = +5 } },
+	{ MODKEY,    			XK_minus,  incrigaps,      {.i = -5 } },
+	{ MODKEY|ShiftMask,     	XK_equal,  incrogaps,      {.i = +5 } },
+	{ MODKEY|ShiftMask,    		XK_minus,  incrogaps,      {.i = -5 } },
+	{ MODKEY|ControlMask|ShiftMask, XK_equal,  defaultgaps,    {0} },	
+	{ MODKEY|ControlMask|ShiftMask, XK_minus,  togglegaps,     {0} },
+
+	/* layout switching */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
@@ -193,28 +216,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_g,	   setlayout,	   {.v = &layouts[8]} },	
 	{ MODKEY,			XK_u,	   setlayout,	   {.v = &layouts[11]} },
 	{ MODKEY|ShiftMask,		XK_u,	   setlayout,      {.v = &layouts[12]} },	
-	{ MODKEY,              		XK_equal,  incrigaps,      {.i = +5 } },
-	{ MODKEY,    			XK_minus,  incrigaps,      {.i = -5 } },
-	{ MODKEY|ShiftMask,     	XK_equal,  incrogaps,      {.i = +5 } },
-	{ MODKEY|ShiftMask,    		XK_minus,  incrogaps,      {.i = -5 } },
-	{ MODKEY|ControlMask|ShiftMask, XK_equal,  defaultgaps,    {0} },	
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
+
+	/* tag switching */	
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
-	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
-	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
-	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
-	{ MODKEY|ShiftMask,		XK_v,      spawn,	   {.v = cfgscript } },
-	{ MODKEY|ShiftMask,		XK_w,      spawn,	   {.v = webscript } },
-	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
-	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -224,6 +234,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+
+	/* quitting/restarting */
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
 	{ MODKEY|ShiftMask, 		XK_q,      quit,           {0} }, 
 };
