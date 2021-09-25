@@ -67,12 +67,12 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
 
 
 # What are the keybindings?
-While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Alt` as specified in `config.h`. While Alt can (sometimes) conflict with other programs' hotkeys I feel that it's more comfortable to use.
-However, if you wish to use the Super/Windows key instead, go to the key definitions section and change the MODKEY value from Mod1Mask to Mod4Mask.
+While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Super`, or the Windows key, as specified in `config.h`. 
+However, if you wish to use the Alt key instead, go to the key definitions section and change the MODKEY value from Mod4Mask to Mod1Mask.
 |Action|Key combo|
 |:---:|:---:|
-|Spawn a terminal|Mod+Shift+Enter|
-|Close window|Mod+Shift+C|
+|Spawn a terminal|Mod+Enter|
+|Close window|Mod+C|
 |Open dmenu prompt|Mod+p|
 |Open favorite programs menu (configurable via scripts/favorites.sh|Mod+Shift+P|
 |Open mpd control menu|Mod+Shift+M|
