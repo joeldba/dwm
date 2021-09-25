@@ -80,7 +80,7 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = { " web ", " chat ", " term ", " game ", " gfx ", " aud ", " vid ", " virt ", " misc " };
+static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
 static const char *tagsel[][2] = {
 	{ "#ff4151", "#272931" },
