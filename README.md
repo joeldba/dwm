@@ -11,10 +11,11 @@ To build dwm, you will need:
 For the best possible experience with this build of dwm, you will need the following
 * terminus-font
 * ttf-font-awesome
-* slock
-* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), and [dwmblocks](https://github.com/joeldba/dwmblocks) (although you could use the stock builds if you really, really want to)
+* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), [slock](https://github.com/joeldba/slock), and [dwmblocks](https://github.com/joeldba/dwmblocks)
 * My [dotfiles](https://github.com/joeldba/dotfiles)
-* mpd + mpc
+* picom-tryone
+* conky
+* mpd + mpc (for music playing
 * scrot
 
 # How do I install it?
@@ -27,7 +28,7 @@ To install dwm, run these commands:
 If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
 
 # Extra tidbits
-For the script bindings, you might need to replace $HOME with your full user path (/home/username) in order for the scripts to launch properly.
+For the script bindings, you will need to replace "/home/rwt" with your own user path in order for the scripts to launch properly.
 You may also need to make the scripts themselves executable by running:
 `chmod +x ~/.config/dwm/scripts/*.sh`
 
@@ -45,6 +46,8 @@ I've applied quite a few patches, some functional & some purely for aesthetic pu
   * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
 * restartsig
   * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
+* coolautostart
+  * Adds a section in config.h where you can define programs/commands that are to be launched when dwm starts.
 * movestack
   * Adds the ability to move windows through the master & stack.
 * cfacts
@@ -98,12 +101,11 @@ However, if you wish to use the Super/Windows key instead, go to the key definit
 |Horizontal tile layout|Mod+Shift+T|
 |Spiral layout|Mod+y|
 |Dwindle layout|Mod+Shift+Y
-|Deck layout|Mod+r|
 |Centered master layout|Mod+u|
 |Centered floating master layout|Mod+Shift+U|
 |Grid layout|Mod+g|
 |Nrowgrid layout|Mod+Shift+G|
-|Monocole layout|Mod+m|
+|Monocle layout|Mod+m|
 |Floating layout|Mod+f|
 |Show/hide scratchpad|Mod+s|
 |Restart dwm|Mod+Shift+R|

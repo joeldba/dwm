@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* general settings */
+/* general Settings */
 /* window settings */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 20;       /* snap pixel */
@@ -66,6 +66,17 @@ static const char *colors[][3]      = {
         [SchemeTagsNorm]  = { fg3,    base1,    "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+};
+
+/* application autostart */
+static const char *const autostart[] = {
+	"xrdb", "/home/rwt/.Xdefaults", NULL,
+	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
+	"conky", NULL,
+	"dunst", NULL,
+	"dwmblocks", NULL,
+	"picom", "--experimental-backends", NULL,
+	NULL /* terminate */
 };
 
 /* tagging */
