@@ -62,7 +62,7 @@ static const char *colors[][3]      = {
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { blue,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { green,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -119,20 +119,20 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "  tile ",       tile },    /* first entry is default */
- 	{ "  monocle ",    monocle },
-	{ "  spiral ",     spiral },
-	{ "  dwindle ",    dwindle },
-	{ "  deck ",       deck },
-	{ "  bstack ",     bstack },
-	{ "  bshoriz ",    bstackhoriz },
-	{ "  grid ",       grid },
-	{ "  nrgrid ",     nrowgrid },
-	{ "  hgrid ",      horizgrid },
-	{ "  ggrid ",      gaplessgrid },
-	{ "  cmaster ",    centeredmaster },
-	{ "  cfmaster ",   centeredfloatingmaster },
-	{ "  float ",      NULL },    /* no layout function means floating behavior */
+	{ " []= ",       tile },    /* first entry is default */
+ 	{ " [M] ",    monocle },
+	{ " [@] ",     spiral },
+	{ " [\\] ",    dwindle },
+	{ " H[] ",       deck },
+	{ " TTT ",     bstack },
+	{ " === ",    bstackhoriz },
+	{ " HHH ",       grid },
+	{ " ### ",     nrowgrid },
+	{ " --- ",      horizgrid },
+	{ " ::: ",      gaplessgrid },
+	{ " |M| ",    centeredmaster },
+	{ " >M> ",   centeredfloatingmaster },
+	{ " ><> ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
