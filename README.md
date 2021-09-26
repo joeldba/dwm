@@ -109,7 +109,7 @@ However, if you wish to use the Alt key instead, go to the key definitions secti
 |Nrowgrid layout|Mod+Shift+G|
 |Monocle layout|Mod+m|
 |Floating layout|Mod+f|
-|Toggle fullscreen mode for focused window|Mod+Shift+F|
+|Toggle fullscreen mode for focused window|Mod+Shift+M|
 |Show/hide scratchpad|Mod+s|
 |Restart dwm|Mod+Shift+R|
 |Quit dwm|Mod+Shift+Q|
