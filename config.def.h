@@ -164,6 +164,7 @@ static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", N
 
 /* key bindings */
 static Key keys[] = {
+	/* START_KEYS */
 	/* modifier                     key        function        argument */
 	/* program/command bindings */	
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -244,6 +245,7 @@ static Key keys[] = {
 	/* quitting/restarting */
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
 	{ MODKEY|ShiftMask, 		XK_q,      quit,           {0} }, 
+	/* END_KEYS */
 };
 
 /* button definitions */
