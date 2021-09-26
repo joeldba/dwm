@@ -174,7 +174,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },
 	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
-	{ MODKEY|ControlMask,		XK_e,      spawn,	   {.v = compoff } },
+	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,  	   togglescratch,  {.v = scratchpadcmd } },
 
