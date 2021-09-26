@@ -167,14 +167,14 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	/* program/command bindings */	
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
-	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = scrotscript } },
-	{ MODKEY|ShiftMask,		XK_m,      spawn,	   {.v = musicscript } },
-	{ MODKEY|ShiftMask,		XK_p,      spawn,	   {.v = favscript } },
-	{ MODKEY|ShiftMask,		XK_v,      spawn,	   {.v = cfgscript } },
-	{ MODKEY|ShiftMask,		XK_w,      spawn,	   {.v = webscript } },
+	{ MODKEY|ControlMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
+	{ MODKEY|ControlMask,		XK_s,      spawn,	   {.v = scrotscript } },
+	{ MODKEY|ControlMask,		XK_m,      spawn,	   {.v = musicscript } },
+	{ MODKEY|ControlMask,		XK_p,      spawn,	   {.v = favscript } },
+	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },
+	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
-	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
+	{ MODKEY|ControlMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,  	   togglescratch,  {.v = scratchpadcmd } },
 
