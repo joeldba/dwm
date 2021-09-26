@@ -61,9 +61,8 @@ static const char *colors[][3]      = {
 	[SchemeGreen]     = { green,  base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeStatus]    = { fg2,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]   = { fg4,    base2,    "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-        [SchemeTagsNorm]  = { fg3,    base1,    "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { blue,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -83,17 +82,19 @@ static const char *const autostart[] = {
 /* tag chars */
 static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
-/* tag selection colors */
-static const char *tagsel[][2] = {
-	{ "#ff4151", "#272931" },
-	{ "#a3bebc", "#272931" },
-	{ "#ebcb8b", "#272931" },
-	{ "#81a1c1", "#272931" },
-	{ "#b48ead", "#272931" },
-	{ "#e5e9f0", "#272931" },
-	{ "#ebcb8b", "#272931" },
-	{ "#a3bebc", "#272931" },
-	{ "#ff4151", "#272931" },
+/* tag colors */
+static const char *tagsel[][2][2] = {
+	/*      normal                      selected    */
+	/*  fg          bg              fg          bg  */
+	{ { "#a3be8c", base1 }, { "#a3be8c", "#272931" } },
+	{ { "#ebcb8b", base1 }, { "#ebcb8b", "#272931" } },
+	{ { "#8fbcbb", base1 }, { "#8fbcbb", "#272931" } },
+	{ { "#88c0d0", base1 }, { "#88c0d0", "#272931" } },
+	{ { "#81a1c1", base1 }, { "#81a1c1", "#272931" } },
+	{ { "#e5e9f0", base1 }, { "#e5e9f0", "#272931" } },
+	{ { "#a3be8c", base1 }, { "#a3be8c", "#272931" } },
+	{ { "#ebcb8b", base1 }, { "#ebcb8b", "#272931" } },
+	{ { "#b48ead", base1 }, { "#b48ead", "#272931" } },
 };
 
 /* window rules */
@@ -118,20 +119,20 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "  tile",       tile },    /* first entry is default */
- 	{ "  monocle",    monocle },
-	{ "  spiral",     spiral },
-	{ "  dwindle",    dwindle },
-	{ "  deck",       deck },
-	{ "  bstack",     bstack },
-	{ "  bshoriz",    bstackhoriz },
-	{ "  grid",       grid },
-	{ "  nrgrid",     nrowgrid },
-	{ "  hgrid",      horizgrid },
-	{ "  ggrid",      gaplessgrid },
-	{ "  cmaster",    centeredmaster },
-	{ "  cfmaster",   centeredfloatingmaster },
-	{ "  float",      NULL },    /* no layout function means floating behavior */
+	{ "  tile ",       tile },    /* first entry is default */
+ 	{ "  monocle ",    monocle },
+	{ "  spiral ",     spiral },
+	{ "  dwindle ",    dwindle },
+	{ "  deck ",       deck },
+	{ "  bstack ",     bstack },
+	{ "  bshoriz ",    bstackhoriz },
+	{ "  grid ",       grid },
+	{ "  nrgrid ",     nrowgrid },
+	{ "  hgrid ",      horizgrid },
+	{ "  ggrid ",      gaplessgrid },
+	{ "  cmaster ",    centeredmaster },
+	{ "  cfmaster ",   centeredfloatingmaster },
+	{ "  float ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -164,7 +165,7 @@ static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", N
 
 /* key bindings */
 static Key keys[] = {
-	/* START_KEYS */
+	/* START_KEYS */ 
 	/* modifier                     key        function        argument */
 	/* program/command bindings */	
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },

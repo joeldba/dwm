@@ -33,42 +33,41 @@ You may also need to make the scripts themselves executable by running:
 `chmod +x ~/.config/dwm/scripts/*.sh`
 
 # What features are there?
-I've applied quite a few patches, some functional & some purely for aesthetic purposes. Here's a list:
+Even though the suckless devs had minimalism in mind when making dwm, I've decided to clog it up with a whole bunch of patches, some functional and some for aesthetics. Here's a list of them:
 * vanitygaps + layouts
-  * Adds a gap inbetween windows, the value of which can be changed in config.h. (default value is 20px for all dimensions) Also comes with a bunch of cool layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
+  * Adds gaps inbetween windows, the value of which can be changed in config.h. (default value is 20px for all dimensions) Also comes with a bunch of cool layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
 * swallow
-  * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window to reduce on-screen clutter.
+  * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window, to reduce on-screen clutter. Very useful for viewing images with sxiv, and videos with mpv.
 * hide-vacant-tags
-  * The bar only shows tags with clients on them, a la i3
+  * The bar only shows tags with clients on them, a la i3.
 * center
   * Centers newly-created floating windows.
 * scratchpad
   * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
 * restartsig
-  * Adds the ability to restart dwm. Making changes is now a breeze, as you don't have to completely restart X11 after rebuilding dwm.
+  * Adds the ability to restart dwm, by pressing Mod+Shift+R. Making changes is much more of a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * coolautostart
   * Adds a section in config.h where you can define programs/commands that are to be launched when dwm starts.
 * actualfullscreen
-  * Allows you to make a window entirely fullscreen.
+  * Allows you to make a window entirely fullscreen by pressing Mod+Shift+M.
 * movestack
-  * Adds the ability to move windows through the master & stack.
+  * Adds the ability to move windows through the master & stack using Mod+Shift+J or K.
 * cfacts
-  * Allows you to grow/shrink windows within master/stack horizontally.
+  * Allows you to grow/shrink windows within master/stack horizontally using Mod+Shift+H or L
 * barpadding
   * Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
-  * Creates a border around the bar. Again, purely for cosmetic purposes.
+  * Creates a purely cosmetic border around the bar. 
 * colorbar
   * Enables setting colors for each individual element of the bar.
 * statuscolors
-  * A patch that enables colors for each status module. Interfaces with my build of dwmblocks.
-* rainbowtags
-  * Each tag has a different color when selected.
-
+  * A patch that enables colors for each status module. This interfaces with my build of dwmblocks. 
+* [modified rainbowtags](https://pastebin.com/MpYmWZyp)
+  * Each individual tag has a different color. The stock rainbowtags patch on suckless.org only colorized selected tags, whereas this modified version colorizes all of them regardless of selection status. 
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Super`, or the Windows key, as specified in `config.h`. 
-However, if you wish to use the Alt key instead, go to the key definitions section and change the MODKEY value from Mod4Mask to Mod1Mask.
+However, if you wish to use the Alt key instead, go to the key definitions section and change the MODKEY value from Mod4Mask to Mod1Mask. Be warned however that the Alt key can conflict with keybindings for some programs.
 |Action|Key combo|
 |:---:|:---:|
 |Spawn a terminal|Mod+Enter|

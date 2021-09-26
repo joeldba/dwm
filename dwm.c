@@ -65,7 +65,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeRed, SchemeGreen, SchemeYellow, SchemeBlue, SchemeStatus, SchemeTagsSel, SchemeTagsNorm, SchemeInfoSel, SchemeInfoNorm }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeRed, SchemeGreen, SchemeYellow, SchemeBlue, SchemeStatus, SchemeLayout, SchemeInfoSel, SchemeInfoNorm }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -294,7 +294,8 @@ static int restart = 0;
 static int running = 1;
 static Cur *cursor[CurLast];
 static Clr **scheme, clrborder;
-static Clr **tagscheme;
+static Clr **tagschemenorm;
+static Clr **tagschemesel;
 static Display *dpy;
 static Drw *drw;
 static Monitor *mons, *selmon;
@@ -903,14 +904,14 @@ drawbar(Monitor *m)
 		continue;
 
 		w = TEXTW(tags[i]);
-		drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagscheme[i] : scheme[SchemeTagsNorm]));
+		drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagschemesel[i] : tagschemenorm[i]));
 		drw_text(drw, x, y, w, th, lrpad / 2, tags[i], urg & 1 << i);
 		if (ulineall || m->tagset[m->seltags] & 1 << i) /* if there are conflicts, just move these lines directly underneath both 'drw_setscheme' and 'drw_text' :) */	
 		drw_rect(drw, x + ulinepad, bh - ulinestroke - ulinevoffset, w - (ulinepad * 2), ulinestroke, 1, 0);
 		x += w;
 	}
 	w = blw = TEXTW(m->ltsymbol);
-	drw_setscheme(drw, scheme[SchemeTagsNorm]);
+	drw_setscheme(drw, scheme[SchemeLayout]);
 	x = drw_text(drw, x, y, w, th, lrpad / 2, m->ltsymbol, 0);
 
 	if ((w = mw - sw - x) > th) {
@@ -1800,9 +1801,12 @@ setup(void)
 	scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
 	for (i = 0; i < LENGTH(colors); i++)
 		scheme[i] = drw_scm_create(drw, colors[i], 3);
-	tagscheme = ecalloc(LENGTH(tagsel), sizeof(Clr *));
+	tagschemenorm = ecalloc(LENGTH(tagsel), sizeof(Clr *));
 	for (i = 0; i < LENGTH(tagsel); i++)
-		tagscheme[i] = drw_scm_create(drw, tagsel[i], 2);
+		tagschemenorm[i] = drw_scm_create(drw, tagsel[i][0], 2);
+	tagschemesel = ecalloc(LENGTH(tagsel), sizeof(Clr *));
+	for (i = 0; i < LENGTH(tagsel); i++)
+		tagschemesel[i] = drw_scm_create(drw, tagsel[i][1], 2);
 	drw_clr_create(drw, &clrborder, col_borderbar);
 	/* init bars */
 	updatebars();
