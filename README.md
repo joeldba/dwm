@@ -46,6 +46,10 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * Centers newly-created floating windows.
 * scratchpad
   * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
+* sticky
+  * The currently focused window can be shown on all workspaces by pressing Mod+s.
+* hideborder
+  * The border of the currently focused window can be hidden by pressing Mod+Shift+B.
 * restartsig
   * Adds the ability to restart dwm, by pressing Mod+Shift+R. Making changes is much more of a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * coolautostart
@@ -90,7 +94,7 @@ However, if you wish to use the Alt key instead, go to the key definitions secti
 |Move focused window between tags|Mod+Shift+1 thru 9 (0 will show focused window on all taga)|
 |Show another tag|Mod+Ctrl+1 thru 9|
 |Show all windows on all tags|Mod+0|
-|Show focused window on all tags|Mod+Shift+0|
+|Make window sticky|Mod+s|
 |Increase master size|Mod+l|
 |Decrease master size|Mod+h|
 |Expand window|Mod+Shift+H|
