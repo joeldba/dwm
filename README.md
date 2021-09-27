@@ -45,7 +45,7 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
 * center
   * Centers newly-created floating windows.
 * scratchpad
-  * Allows you to show/hide a small, floating terminal window for quick typing or running commands.
+  * Allows you to show/hide a small, floating terminal window for quick typing or running commands, by pressing Mod+grave (or tilde key).
 * sticky
   * The currently focused window can be shown on all workspaces by pressing Mod+s.
 * hideborder
