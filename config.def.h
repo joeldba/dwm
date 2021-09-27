@@ -172,7 +172,7 @@ static Key keys[] = {
 	/* program/command bindings */	
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ControlMask,		XK_x,	   spawn,	   {.v = pwrscript } },	
-	{ MODKEY|ControlMask,		XK_s,      spawn,	   {.v = scrotscript } },
+	{ 0,				XK_Print,  spawn,	   {.v = scrotscript } },
 	{ MODKEY|ControlMask,		XK_m,      spawn,	   {.v = musicscript } },
 	{ MODKEY|ControlMask,		XK_p,      spawn,	   {.v = favscript } },
 	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },

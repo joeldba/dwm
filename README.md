@@ -83,7 +83,7 @@ However, if you wish to use the Alt key instead, go to the key definitions secti
 |Open mpd control menu|Mod+Ctrl+m|
 |Open favorite websites menu (configurable via scripts/webfavs.sh)|Mod+Ctrl+w|
 |Open config file selection menu (configurable via scripts/config.sh)|Mod+Ctrl+v|
-|Open screenshot/scrot menu|Mod+Ctrl+s|
+|Open screenshot/scrot menu|PrintScr|
 |Open power options menu|Mod+Ctrl+x|
 |Move focus right|Mod+k|
 |Move focus left|Mod+j|
