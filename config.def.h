@@ -48,7 +48,7 @@ static const char col_borderbar[]   = "#0f111a";
 
 /* other colors (used in statusbar) */
 static const char red[]       	    = "#ff4151";
-static const char green[]           = "#a3bebc";
+static const char green[]           = "#a3be8c";
 static const char yellow[]          = "#ebcb8b";
 static const char blue[]       	    = "#81a1c1";
 
@@ -62,7 +62,7 @@ static const char *colors[][3]      = {
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { green,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { green,  base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
