@@ -40,6 +40,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window, to reduce on-screen clutter. Very useful for viewing images with sxiv, and videos with mpv.
 * hide-vacant-tags
   * The bar only shows tags with clients on them, a la i3.
+* alternativetags
+  * Allows you to temporarily show numbers instead of icons for each tag by pressing Mod+Ctrl+0.
 * center
   * Centers newly-created floating windows.
 * scratchpad
@@ -87,6 +89,8 @@ However, if you wish to use the Alt key instead, go to the key definitions secti
 |Go to last tag|Mod+Tab|
 |Move focused window between tags|Mod+Shift+1 thru 9 (0 will show focused window on all taga)|
 |Show another tag|Mod+Ctrl+1 thru 9|
+|Show all windows on all tags|Mod+0|
+|Show focused window on all tags|Mod+Shift+0|
 |Increase master size|Mod+l|
 |Decrease master size|Mod+h|
 |Expand window|Mod+Shift+H|
