@@ -103,7 +103,7 @@ However, if you wish to use the Alt key instead, go to the key definitions secti
 |Decrease master size|Mod+h|
 |Expand window|Mod+Shift+H|
 |Shrink window|Mod+Shift+L|
-|Make slave master|Mod+Ctrl+Enter|
+|Move focused window to master|Mod+Space|
 |Increase amt of masters|Mod+i|
 |Decrease amt of masters|Mod+d|
 |Toggle float on focused window|Mod+Shift+Space|
