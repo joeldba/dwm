@@ -13,6 +13,7 @@ Applications
 	IMG:/home/rwt/.config/xmenu/icons/libreoffice.png	LibreOffice	libreoffice
 	IMG:/home/rwt/.config/xmenu/icons/ncmpcpp.png		Ncmpcpp		st -e ncmpcpp
 	IMG:/home/rwt/.config/xmenu/icons/vim.png		Vim		st -e vim
+Change wallpaper...	nitrogen
 
 Open terminal		st
 
