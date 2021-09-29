@@ -116,6 +116,7 @@ static const Rule rules[] = {
 	{ "Gimp",               NULL,     NULL,        	1 << 4,    0,         0,          0,           0,        -1 },
 	{ "Audacity",           NULL,     NULL,        	1 << 5,    0,         0,          0,           0,        -1 },
 	{ "kdenlive",           NULL,     NULL,        	1 << 6,    0,         0,          0,           0,        -1 },
+	{ "obs",                NULL,     NULL,        	1 << 6,    0,         0,          0,           0,        -1 },
 	{ "VirtualBox Manager",	NULL,     NULL,        	1 << 7,    0,         0,          0,           0,        -1 },
 	{ NULL,               NULL,     "Event Tester", 0,         0, 	      0,          0,           1,        -1 }, /* xev */
 };
