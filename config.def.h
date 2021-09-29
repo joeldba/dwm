@@ -122,19 +122,19 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ " []= ",    tile },    /* first entry is default */
+	{ " ><> ",    NULL },    /* no layout function means floating behavior */
  	{ " [M] ",    monocle },
 	{ " [@] ",    spiral },
 	{ " [\\] ",   dwindle },
-	{ " H[] ",    deck },
 	{ " TTT ",    bstack },
-	{ " === ",    bstackhoriz },
+	{ " |M| ",    centeredmaster },
+	{ " >M> ",    centeredfloatingmaster },
 	{ " HHH ",    grid },
 	{ " ### ",    nrowgrid },
 	{ " --- ",    horizgrid },
+	{ " H[] ",    deck },
+	{ " === ",    bstackhoriz },
 	{ " ::: ",    gaplessgrid },
-	{ " |M| ",    centeredmaster },
-	{ " >M> ",    centeredfloatingmaster },
-	{ " ><> ",    NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -153,6 +153,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL }; /* run prompt */
 static const char *termcmd[]  = { "st", NULL }; /* terminal */
+static const char *layoutmenu_cmd = "/home/rwt/.config/dwm/scripts/layoutmenu.sh"; /* layout menu */
+static const char *rclickcmd[] = { "/home/rwt/.config/xmenu/xmenu.sh", NULL }; /* right-click program menu */
 static const char scratchpadname[] = "scratchpad"; /* name of the scratchpad */
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL }; /* scratchpad */
 static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NULL }; /* power options menu */
@@ -213,15 +215,15 @@ static Key keys[] = {
 
 	/* layout switching */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,		XK_t,	   setlayout,	   {.v = &layouts[5]} },
-	{ MODKEY,			XK_y,	   setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,		XK_y,	   setlayout,	   {.v = &layouts[3]} },
-	{ MODKEY,			XK_g,	   setlayout,	   {.v = &layouts[7]} },
-	{ MODKEY|ShiftMask,		XK_g,	   setlayout,	   {.v = &layouts[8]} },	
-	{ MODKEY,			XK_u,	   setlayout,	   {.v = &layouts[11]} },
-	{ MODKEY|ShiftMask,		XK_u,	   setlayout,      {.v = &layouts[12]} },	
+	{ MODKEY,			XK_y,	   setlayout,      {.v = &layouts[3]} },
+	{ MODKEY|ShiftMask,		XK_y,	   setlayout,	   {.v = &layouts[4]} },
+	{ MODKEY,			XK_g,	   setlayout,	   {.v = &layouts[8]} },
+	{ MODKEY|ShiftMask,		XK_g,	   setlayout,	   {.v = &layouts[9]} },	
+	{ MODKEY,			XK_u,	   setlayout,	   {.v = &layouts[6]} },
+	{ MODKEY|ShiftMask,		XK_u,	   setlayout,      {.v = &layouts[7]} },	
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
@@ -258,8 +260,8 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button1,        layoutmenu,     {0} },	
+	{ ClkRootWin,           0,              Button3,        spawn,          {.v = rclickcmd } },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },

@@ -11,7 +11,7 @@ To build dwm, you will need:
 For the best possible experience with this build of dwm, you will need the following
 * terminus-font
 * ttf-font-awesome
-* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), [slock](https://github.com/joeldba/slock), and [dwmblocks](https://github.com/joeldba/dwmblocks)
+* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), [slock](https://github.com/joeldba/slock), [dwmblocks](https://github.com/joeldba/dwmblocks), and [xmenu](https://github.com/joeldba/xmenu)
 * My [dotfiles](https://github.com/joeldba/dotfiles)
 * picom-tryone
 * conky
@@ -28,7 +28,7 @@ To install dwm, run these commands:
 If using xinit, put `exec dwm` in your .xinitrc and dwm will launch when `startx` is run.
 
 # Extra tidbits
-For the script bindings, you will need to replace "/home/rwt" with your own user path in order for the scripts to launch properly.
+For any keybindings that are used to launch dmenu/xmenu scripts, you will need to replace "/home/rwt" with your own user path in order for the scripts to launch properly. I would use $HOME or '~' but unfortunately there's no way to get those working under dwm as far as I know.
 You may also need to make the scripts themselves executable by running:
 `chmod +x ~/.config/dwm/scripts/*.sh`
 
@@ -50,6 +50,10 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * The currently focused window can be shown on all workspaces by pressing Mod+s.
 * hideborder
   * The border of the currently focused window can be hidden by pressing Mod+Shift+B.
+* cursorwarp
+  * Shifting focus moves the mouse cursor to the center of the focused window.
+* layoutmenu
+  * Using xmenu, a menu of available layouts can be brought up by left-clicking on the layout indicator icon in the bar. 
 * restartsig
   * Adds the ability to restart dwm, by pressing Mod+Shift+R. Making changes is much more of a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * coolautostart
