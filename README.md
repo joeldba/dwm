@@ -2,11 +2,14 @@
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 # Prerequisites:
-To build dwm, you will need:
+To build this version of dwm, you will need:
 * libx11
 * libxft
 * libxinerama
 * libxcb
+* libxrender
+* libxrandr
+* imlib2
 
 For the best possible experience with this build of dwm, you will need the following
 * terminus-font
@@ -74,6 +77,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * A patch that enables colors for each status module. This interfaces with my build of dwmblocks. 
 * [modified rainbowtags](https://pastebin.com/MpYmWZyp)
   * Each individual tag has a different color. The stock rainbowtags patch on suckless.org only colorized selected tags, whereas this modified version colorizes all of them regardless of selection status. 
+* winicon
+  * Shows an icon (if available) next to the window title in the bar.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Super`, or the Windows key, as specified in `config.h`. 
