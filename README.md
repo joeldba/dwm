@@ -1,5 +1,9 @@
 # About dwm
-dwm is an extremely fast, small, and dynamic window manager for the X11 windowing system. It can manage windows in various tiling and floating/overlapping layouts. By default, dwm uses a tiling master/stack layout to manage windows; newly-opened windows are theoretically supposed to be the most important to you, and are thus placed in the master area- whereas older, less important windows are gradually moved deeper into the stack area. dwm is configured by directly editing its source code and recompiling- which keeps it simple and secure. The stock build of dwm from suckless.org is relatively minimal, and additional functionality can be implemented by the user via patches.
+dwm is an extremely fast, small, and dynamic window manager for the X11 windowing system. It can manage windows in various tiling and floating/overlapping layouts. 
+
+By default, dwm uses a tiling master/stack layout to manage windows; newly-opened windows are theoretically supposed to be the most important to you, and are thus placed in the master area- whereas older, less important windows are gradually moved deeper into the stack area. 
+
+dwm is configured by directly editing its source code and recompiling- which keeps it simple and secure. The stock build of dwm from suckless.org is relatively minimal, and additional functionality can be implemented by the user via patches.
 
 # Prerequisites:
 To build this version of dwm, you will need:
