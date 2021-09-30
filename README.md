@@ -1,5 +1,5 @@
 # About dwm
-dwm is an extremely fast, small, and dynamic window manager for X.
+dwm is an extremely fast, small, and dynamic window manager for the X11 windowing system. It can manage windows in various tiling and floating/overlapping layouts. By default, dwm uses a tiling master/stack layout to manage windows; newly-opened windows are theoretically supposed to be the most important to you, and are thus placed in the master area- whereas older, less important windows are gradually moved deeper into the stack area. dwm is configured by directly editing its source code and recompiling- which keeps it simple and secure. The stock build of dwm from suckless.org is relatively minimal, and additional functionality can be implemented by the user via patches.
 
 # Prerequisites:
 To build this version of dwm, you will need:
@@ -38,7 +38,7 @@ You may also need to make the scripts themselves executable by running:
 # What features are there?
 Even though the suckless devs had minimalism in mind when making dwm, I've decided to clog it up with a whole bunch of patches, some functional and some for aesthetics. Here's a list of them:
 * vanitygaps + layouts
-  * Adds gaps inbetween windows, the value of which can be changed in config.h. (default value is 20px for all dimensions) Also comes with a bunch of cool layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
+  * Adds gaps inbetween windows, the value of which can be changed in config.h. (default value is 15px for all dimensions) Also comes with a bunch of cool layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
 * swallow
   * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window, to reduce on-screen clutter. Very useful for viewing images with sxiv, and videos with mpv.
 * hide-vacant-tags
@@ -78,7 +78,9 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
 * [modified rainbowtags](https://pastebin.com/MpYmWZyp)
   * Each individual tag has a different color. The stock rainbowtags patch on suckless.org only colorized selected tags, whereas this modified version colorizes all of them regardless of selection status. 
 * winicon
-  * Shows an icon (if available) next to the window title in the bar.
+  * Shows an icon next to the window title in the bar, when available.
+
+Additional features include various dmenu run prompts, including ones for taking screenshots via scrot, power options, and favorite programs. All of the scripts used to launch these dmenu prompts are in the `scripts` folder and can be edited with relative ease. There is also an Openbox-like menu you can open by right-clicking on the desktop (This requires xmenu to be installed). This desktop right-click menu can be configured by editing the `rclick.sh` file in the `scripts` folder.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Super`, or the Windows key, as specified in `config.h`. 
