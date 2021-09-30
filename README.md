@@ -84,7 +84,9 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
 * winicon
   * Shows an icon next to the window title in the bar, when available.
 
-Additional features include various dmenu run prompts, including ones for taking screenshots via scrot, power options, and favorite programs. All of the scripts used to launch these dmenu prompts are in the `scripts` folder and can be edited with relative ease. There is also an Openbox-like menu you can open by right-clicking on the desktop (This requires xmenu to be installed). This desktop right-click menu can be configured by editing the `rclick.sh` file in the `scripts` folder.
+Additional features include various dmenu run prompts, including ones for taking screenshots via scrot, power options, and favorite programs. All of the scripts used to launch these dmenu prompts are in the `scripts` folder and can be edited with relative ease. 
+
+There is also an Openbox-like menu you can open by right-clicking on the desktop (This requires xmenu to be installed). This desktop right-click menu can be configured by editing the `rclick.sh` file in the `scripts` folder.
 
 # What are the keybindings?
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. The default modkey is `Super`, or the Windows key, as specified in `config.h`. 
