@@ -64,7 +64,7 @@ static const char *colors[][3]      = {
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { blue,   base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { blue,  base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -163,6 +163,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL }; /* run prompt */
 static const char *termcmd[]  = { "st", NULL }; /* terminal */
+static const char *tabtermcmd[]  = { "tabbed", "-r", "2", "st", "-w", "''", NULL }; /* terminal */
 static const char *layoutmenu_cmd = "/home/rwt/.config/dwm/scripts/layoutmenu.sh"; /* layout menu */
 static const char *rclickcmd[] = { "/home/rwt/.config/dwm/scripts/rclick.sh", NULL }; /* right-click program menu */
 static const char scratchpadname[] = "scratchpad"; /* name of the scratchpad */
@@ -192,6 +193,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,	        XK_Return, spawn,          {.v = tabtermcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 
 	/* window management */

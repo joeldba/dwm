@@ -18,7 +18,7 @@ To build this version of dwm, you will need:
 For the best possible experience with this build of dwm, you will need the following
 * terminus-font
 * ttf-font-awesome
-* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), [slock](https://github.com/joeldba/slock), [dwmblocks](https://github.com/joeldba/dwmblocks), and [xmenu](https://github.com/joeldba/xmenu)
+* My builds of [st](https://github.com/joeldba/st), [dmenu](https://github.com/joeldba/dmenu), [slock](https://github.com/joeldba/slock), [dwmblocks](https://github.com/joeldba/dwmblocks), [xmenu](https://github.com/joeldba/xmenu), and [tabbed](https://github.com/joeldba/tabbed)
 * My [dotfiles](https://github.com/joeldba/dotfiles)
 * picom-tryone
 * conky
@@ -92,9 +92,12 @@ There is also an Openbox-like menu you can open by right-clicking on the desktop
 While this information can be gathered from `config.h` I've gone the extra mile and made a table that outlines most of the keybindings for you. 
 
 The default modkey is `Super`, or the Windows key, as specified in `config.h`. However, if you wish to use the Alt key instead, go to the `/* key definitions */` section and change the `MODKEY` value from Mod4Mask to Mod1Mask. Be warned however that the Alt key can conflict with keybindings for some programs.
+
+I've also included keybindings for my build of tabbed which can be found below the dwm bindings.
 |Action|Key combo|
 |:---:|:---:|
-|Spawn a terminal|Mod+Enter|
+|Spawn terminal|Mod+Enter|
+|Spawn tabbed terminal|Mod+Shift+Enter|
 |Close window|Mod+C|
 |Open dmenu prompt|Mod+p|
 |Open favorite programs menu (configurable via scripts/favorites.sh|Mod+Shift+P|
@@ -140,4 +143,11 @@ The default modkey is `Super`, or the Windows key, as specified in `config.h`. H
 |Show/hide scratchpad|Mod+s|
 |Restart dwm|Mod+Shift+R|
 |Quit dwm|Mod+Shift+Q|
-
+|Tabbed Bindings|
+|Action|Key combo|
+|:---:|:---:|
+|Open tab|Ctrl+Shift+Enter|
+|Close focused tab|Ctrl+q|
+|Shift between tabs|Ctrl+Shift+H/L|
+|Move focused tab|Ctrl+Shift+J/K]
+|Go to tab|Ctrl+1-9|
