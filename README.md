@@ -143,7 +143,9 @@ I've also included keybindings for my build of tabbed which can be found below t
 |Show/hide scratchpad|Mod+s|
 |Restart dwm|Mod+Shift+R|
 |Quit dwm|Mod+Shift+Q|
-|Tabbed Bindings|
+
+Tabbed bindings
+
 |Action|Key combo|
 |:---:|:---:|
 |Open tab|Ctrl+Shift+Enter|
