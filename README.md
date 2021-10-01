@@ -44,7 +44,7 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
 * vanitygaps + layouts
   * Adds gaps inbetween windows, the value of which can be changed in config.h. (default value is 15px for all dimensions) Also comes with a bunch of cool layouts, like spiral, dwindle, bstack, centeredmaster, etc. 
 * swallow
-  * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window, to reduce on-screen clutter. Very useful for viewing images with sxiv, and videos with mpv.
+  * Any window created by st (or any other terminal specified in config.h) will overlap the entirety of the terminal window, to reduce on-screen clutter. Very useful for viewing images with sxiv, and videos with mpv. Does NOT work with tabbed terminals.
 * hide-vacant-tags
   * The bar only shows tags with clients on them, a la i3.
 * alternativetags
