@@ -109,6 +109,7 @@ static const Rule rules[] = {
 	 */
 	/* class              instance  title           tags mask  iscentered  isfloating  isterminal  noswallow  monitor */
 	{ "st-256color",        NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
+	{ "tabbed",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
 	{ "Conky",              NULL,     NULL,        	0, 	   0,         1,          0,           1,        -1 },
 	{ "firefox",            NULL,     NULL,        	1, 	   0,         0,          0,           0,        -1 },
 	{ "discord",            NULL,     NULL,        	1 << 1,    0,         0,          0,           0,        -1 },
