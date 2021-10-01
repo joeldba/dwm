@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xmenu <<EOF | sh &
-Applications
+ Applications
 	IMG:/home/rwt/.config/xmenu/icons/web.png		Firefox		firefox
 	IMG:/home/rwt/.config/xmenu/icons/discord.png		Discord	        discord	
 	IMG:/home/rwt/.config/xmenu/icons/steam.png		Steam	        steam
@@ -13,11 +13,12 @@ Applications
 	IMG:/home/rwt/.config/xmenu/icons/libreoffice.png	LibreOffice	libreoffice
 	IMG:/home/rwt/.config/xmenu/icons/ncmpcpp.png		Ncmpcpp		st -e ncmpcpp
 	IMG:/home/rwt/.config/xmenu/icons/vim.png		Vim		st -e vim
-Change wallpaper...	nitrogen
+ Change wallpaper...	nitrogen
 
-Open terminal		st
+ Open terminal			st
+ Open tabbed terminal		tabbed -c -r 2 st -w ''
 
-Lock			slock
-Shutdown		doas poweroff
-Reboot			doas reboot
+ Lock			slock
+ Shutdown		doas poweroff
+ Reboot		doas reboot
 EOF

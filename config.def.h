@@ -3,7 +3,7 @@
 /* general Settings */
 /* window settings */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 20;       /* snap pixel */
+static const unsigned int snap      = 15;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 
 /* bar settings */
