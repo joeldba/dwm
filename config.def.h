@@ -72,7 +72,7 @@ static const char *colors[][3]      = {
 /* application autostart */
 static const char *const autostart[] = {
 	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
-	"conky", NULL,
+	"conky", "--config", "/home/rwt/.config/conky/conky-dwm.conf", NULL,
 	"dunst", NULL,
 	"dwmblocks", NULL,
 	"picom", "--experimental-backends", NULL,
