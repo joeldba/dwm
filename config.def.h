@@ -71,7 +71,6 @@ static const char *colors[][3]      = {
 
 /* application autostart */
 static const char *const autostart[] = {
-	"xrdb", "/home/rwt/.Xdefaults", NULL,
 	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
 	"conky", NULL,
 	"dunst", NULL,
