@@ -15,7 +15,10 @@ Applications
 	IMG:$HOME/.config/xmenu/icons/vim.png		Vim		st -e vim
 Change wallpaper...	nitrogen
 
-Open terminal		st
+Open terminal...
+	st	st
+	alacritty	alacritty
+	xterm		xterm
 Open tabbed terminal	tabbed -c -r 2 st -w ''
 
 Lock			slock
