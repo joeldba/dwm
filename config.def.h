@@ -177,6 +177,8 @@ static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", N
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL }; /* favorite programs menu */
 static const char *compon[]  = { "picom", "--experimental-backends", NULL }; /* picom */
 static const char *compoff[] = { "pkill", "picom", NULL }; /* kill picom */
+static const char *rson[] = { "redshift", "-P", "-O", "5000", NULL }; /* enable redshift */
+static const char *rsoff[] = { "redshift", "-x", NULL }; /* enable redshift */
 static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL }; /* config file selection menu */
 static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", NULL }; /* favorite webpages menu */
 #include "movestack.c"
@@ -195,6 +197,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
+	{ MODKEY,			XK_n,      spawn,	   {.v = rson } },
+	{ MODKEY|ShiftMask,		XK_n,      spawn,	   {.v = rsoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,	        XK_Return, spawn,          {.v = tabtermcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
