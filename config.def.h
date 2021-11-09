@@ -74,6 +74,7 @@ static const char *const autostart[] = {
 	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
 	"conky", "--config", "/home/rwt/.config/conky/conky.conf", NULL,
 	"dunst", NULL,
+	"mpd", NULL,	
 	"dwmblocks", NULL,
 	"picom", "--experimental-backends", NULL,
 	NULL /* terminate */
@@ -81,7 +82,7 @@ static const char *const autostart[] = {
 
 /* tagging */
 /* tag chars */
-static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
+static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const int momentaryalttags = 1; /* 1 means alttags will show only when key is held down*/
 
@@ -113,7 +114,7 @@ static const Rule rules[] = {
 	{ "URxvt",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
 	{ "tabbed",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
 	{ "Conky",              NULL,     NULL,        	0, 	   0,         1,          0,           1,        -1 },
-	{ "firefox",            NULL,     NULL,        	1, 	   0,         0,          0,           0,        -1 },
+	{ "Firefox",            NULL,     NULL,        	1, 	   0,         0,          0,           0,        -1 },
 	{ "discord",            NULL,     NULL,        	1 << 1,    0,         0,          0,           0,        -1 },
 	{ "Steam",              NULL,     NULL,        	1 << 3,    0,         0,          0,           0,        -1 },
 	{ "Gimp",               NULL,     NULL,        	1 << 4,    0,         0,          0,           0,        -1 },
