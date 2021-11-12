@@ -100,7 +100,8 @@ I've also included keybindings for my build of tabbed which can be found below t
 |:---:|:---:|
 |Spawn terminal|Mod+Enter|
 |Spawn tabbed terminal|Mod+Shift+Enter|
-|Close window|Mod+C|
+|Close focused window|Mod+c|
+|Close all unfocused windows|Mod+Shift+C|
 |Open dmenu prompt|Mod+p|
 |Open favorite programs menu (configurable via scripts/favorites.sh|Mod+Shift+P|
 |Open mpd control menu|Mod+Ctrl+m|
