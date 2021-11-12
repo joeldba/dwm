@@ -57,8 +57,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * The currently focused window can be shown on all workspaces by pressing Mod+s.
 * hideborder
   * The border of the currently focused window can be hidden by pressing Mod+Shift+B.
-* cursorwarp
-  * Shifting focus moves the mouse cursor to the center of the focused window.
+* focusonclick
+  * When using the mouse, windows must be clicked before they can be focused.
 * layoutmenu
   * Using xmenu, a menu of available layouts can be brought up by left-clicking on the layout indicator icon in the bar. 
 * restartsig
@@ -71,6 +71,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * Adds the ability to move windows through the master & stack using Mod+Shift+J or K.
 * cfacts
   * Allows you to grow/shrink windows within master/stack horizontally using Mod+Shift+H or L
+* killunsel
+  * Gives the ability to kill all unfocused windows with Mod+Shift+C.
 * barpadding
   * Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)

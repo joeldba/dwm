@@ -5,6 +5,7 @@
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
+static const int focusonwheel       = 0;	/* 1 means mousewheel can change window focus */
 
 /* bar settings */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -224,6 +225,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
 	{ MODKEY|ShiftMask,             XK_m,      togglefullscr,  {0} },
 	{ MODKEY,             		XK_c,      killclient,     {0} },
+	{ MODKEY|ShiftMask,        	XK_c,      killunsel,      {0} },
 
 	/* gaps management */	
 	{ MODKEY,              		XK_equal,  incrigaps,      {.i = +5 } },
