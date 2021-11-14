@@ -65,7 +65,7 @@ static const char *colors[][3]      = {
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { blue,  base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { fg3,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -86,6 +86,10 @@ static const char *const autostart[] = {
 static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const int momentaryalttags = 1; /* 1 means alttags will show only when key is held down*/
+
+/* sticky window indicator settings */
+static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
+static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
 
 /* tag colors */
 static const char *tagsel[][2][2] = {

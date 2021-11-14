@@ -73,6 +73,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * Allows you to grow/shrink windows within master/stack horizontally using Mod+Shift+H or L
 * killunsel
   * Gives the ability to kill all unfocused windows with Mod+Shift+C.
+* stickyindicator
+  * Provides an indicator in the bar that shows when a window is sticky.
 * barpadding
   * Creates a gap around the bar, purely for cosmetic purposes.
 * [dwm-border-bar](https://codemadness.org/paste/dwm-border-bar.patch)
@@ -100,8 +102,7 @@ I've also included keybindings for my build of tabbed which can be found below t
 |:---:|:---:|
 |Spawn terminal|Mod+Enter|
 |Spawn tabbed terminal|Mod+Shift+Enter|
-|Close focused window|Mod+c|
-|Close all unfocused windows|Mod+Shift+C|
+|Close window|Mod+C|
 |Open dmenu prompt|Mod+p|
 |Open favorite programs menu (configurable via scripts/favorites.sh|Mod+Shift+P|
 |Open mpd control menu|Mod+Ctrl+m|
