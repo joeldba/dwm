@@ -2,7 +2,7 @@
 
 /* general Settings */
 /* window settings */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 15;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int focusonwheel       = 0;	/* 1 means mousewheel can change window focus */
@@ -31,9 +31,9 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 
 /* tag appearance settings */
-static const unsigned int ulinepad	= 2;	/* horizontal padding between the underline and tag */
-static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
-static const unsigned int ulinevoffset	= 2;	/* how far above the bottom of the bar the line should appear */
+static const unsigned int ulinepad	= 1;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 1;	/* thickness / height of the underline */
+static const unsigned int ulinevoffset	= 1;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 /* colors */
@@ -47,7 +47,7 @@ static const char fg1[]       	    = "#3b4252";
 static const char fg2[]             = "#b48ead";
 static const char fg3[]             = "#81a1c1";
 static const char fg4[]             = "#e5e9f0";
-static const char col_borderbar[]   = "#0f111a";
+static const char col_borderbar[]   = "#272931";
 
 /* other colors (used in statusbar) */
 static const char red[]       	    = "#ff4151";
@@ -60,11 +60,11 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] 	  = { fg3,    base1,    base1 },
 	[SchemeSel]  	  = { fg4,    base1,    base2 },
-	[SchemeRed]       = { red,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeGreen]     = { green,  base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeRed]       = { red,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeGreen]     = { green,  base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeYellow]    = { yellow, base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeBlue]      = { blue,   base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]    = { fg4,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeLayout]	  = { fg3,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
@@ -72,18 +72,16 @@ static const char *colors[][3]      = {
 
 /* application autostart */
 static const char *const autostart[] = {
-	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
+	"xwallpaper --zoom /home/rwt/.wallpapers/solid.png", NULL,
 	"conky", "--config", "/home/rwt/.config/conky/conky.conf", NULL,
 	"dunst", NULL,
-	"mpd", NULL,	
 	"dwmblocks", NULL,
-	"picom", "--experimental-backends", NULL,
 	NULL /* terminate */
 };
 
 /* tagging */
 /* tag chars */
-static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
+static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const int momentaryalttags = 1; /* 1 means alttags will show only when key is held down*/
 
@@ -181,8 +179,6 @@ static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NUL
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL }; /* screenshot-taking menu */
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL }; /* rudimentary mpd control menu */
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL }; /* favorite programs menu */
-static const char *compon[]  = { "picom", "--experimental-backends", NULL }; /* picom */
-static const char *compoff[] = { "pkill", "picom", NULL }; /* kill picom */
 static const char *rson[] = { "redshift", "-P", "-O", "5000", NULL }; /* enable redshift */
 static const char *rsoff[] = { "redshift", "-x", NULL }; /* enable redshift */
 static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL }; /* config file selection menu */
@@ -201,8 +197,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_p,      spawn,	   {.v = favscript } },
 	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },
 	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
-	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
-	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,			XK_n,      spawn,	   {.v = rson } },
 	{ MODKEY|ShiftMask,		XK_n,      spawn,	   {.v = rsoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
