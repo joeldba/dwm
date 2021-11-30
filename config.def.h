@@ -58,7 +58,7 @@ static const char blue[]       	    = "#81a1c1";
 /* color schemes */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] 	  = { fg3,    base1,    base1 },
+	[SchemeNorm] 	  = { fg3,    base1,    base0 },
 	[SchemeSel]  	  = { fg4,    base1,    base2 },
 	[SchemeRed]       = { red,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeGreen]     = { green,  base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
