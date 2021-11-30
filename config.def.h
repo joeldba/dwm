@@ -72,10 +72,11 @@ static const char *colors[][3]      = {
 
 /* application autostart */
 static const char *const autostart[] = {
-	"xwallpaper --zoom /home/rwt/.wallpapers/solid.png", NULL,
+	"xwallpaper", "--zoom", "/home/rwt/.wallpapers/mojave5k.jpg", NULL,
 	"conky", "--config", "/home/rwt/.config/conky/conky.conf", NULL,
 	"dunst", NULL,
 	"dwmblocks", NULL,
+	"picom", "--experimental-backends", NULL,
 	NULL /* terminate */
 };
 
@@ -179,6 +180,8 @@ static const char *pwrscript[] = { "/home/rwt/.config/dwm/scripts/power.sh", NUL
 static const char *scrotscript[] = { "/home/rwt/.config/dwm/scripts/scrot.sh", NULL }; /* screenshot-taking menu */
 static const char *musicscript[] = { "/home/rwt/.config/dwm/scripts/music.sh", NULL }; /* rudimentary mpd control menu */
 static const char *favscript[] = { "/home/rwt/.config/dwm/scripts/favorites.sh", NULL }; /* favorite programs menu */
+static const char *compon[]  = { "picom", "--experimental-backends", NULL }; /* picom */
+static const char *compoff[] = { "pkill", "picom", NULL }; /* kill picom */
 static const char *rson[] = { "redshift", "-P", "-O", "5000", NULL }; /* enable redshift */
 static const char *rsoff[] = { "redshift", "-x", NULL }; /* enable redshift */
 static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL }; /* config file selection menu */
@@ -197,6 +200,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_p,      spawn,	   {.v = favscript } },
 	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },
 	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
+	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
+	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,			XK_n,      spawn,	   {.v = rson } },
 	{ MODKEY|ShiftMask,		XK_n,      spawn,	   {.v = rsoff } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
