@@ -61,6 +61,8 @@ Even though the suckless devs had minimalism in mind when making dwm, I've decid
   * When using the mouse, windows must be clicked before they can be focused.
 * layoutmenu
   * Using xmenu, a menu of available layouts can be brought up by left-clicking on the layout indicator icon in the bar. 
+* cyclelayouts
+  * Allows cycling between layouts by pressing Mod + Tab or Mod + Shift + Tab.
 * restartsig
   * Adds the ability to restart dwm, by pressing Mod+Shift+R. Making changes is much more of a breeze, as you don't have to completely restart X11 after rebuilding dwm.
 * coolautostart
@@ -142,6 +144,8 @@ I've also included keybindings for my build of tabbed which can be found below t
 |Monocle layout|Mod+m|
 |Floating layout|Mod+f|
 |Toggle fullscreen mode for focused window|Mod+Shift+M|
+|Cycle layout forward|Mod+Tab|
+|Cycle layout backward|Mod+Shift+Tab|
 |Enable compositor|Mod+e|
 |Disable compositor|Mod+Shift+E|
 |Show/hide scratchpad|Mod+s|
