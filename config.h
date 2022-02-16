@@ -47,25 +47,16 @@ static const char fg1[]       	    = "#3b4252";
 static const char fg2[]             = "#b48ead";
 static const char fg3[]             = "#81a1c1";
 static const char fg4[]             = "#e5e9f0";
+static const char fg5[]             = "#b3c7da";
 static const char col_borderbar[]   = "#0f111a";
-
-/* other colors (used in statusbar) */
-static const char red[]       	    = "#ff4151";
-static const char green[]           = "#a3be8c";
-static const char yellow[]          = "#ebcb8b";
-static const char blue[]       	    = "#81a1c1";
 
 /* color schemes */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] 	  = { fg3,    base1,    base1 },
 	[SchemeSel]  	  = { fg4,    base1,    base2 },
-	[SchemeRed]       = { red,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeGreen]     = { green,  base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeStatus]    = { fg4,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { fg4,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeStatus]    = { fg5,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { fg5,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -73,7 +64,7 @@ static const char *colors[][3]      = {
 /* application autostart */
 static const char *const autostart[] = {
 	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
-	"conky", "--config", "/home/rwt/.config/conky/conky.conf", NULL,
+	"conky", "--config", "/HOME/rwt/.config/conky/conky.conf", NULL,
 	"dunst", NULL,
 	"dwmblocks", NULL,
 	"picom", "--experimental-backends", NULL,
@@ -113,21 +104,22 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class              instance  title           tags mask  iscentered  isfloating  isterminal  noswallow  monitor */
-	{ "st-256color",        NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
-	{ "XTerm",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
-	{ "Alacritty",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
-	{ "URxvt",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
-	{ "tabbed",        	NULL,     NULL,         0, 	   1,         0,          1,           0,        -1 },
-	{ "Conky",              NULL,     NULL,        	0, 	   0,         1,          0,           1,        -1 },
-	{ "Firefox",            NULL,     NULL,        	1, 	   0,         0,          0,           0,        -1 },
-	{ "discord",            NULL,     NULL,        	1 << 1,    0,         0,          0,           0,        -1 },
-	{ "Steam",              NULL,     NULL,        	1 << 3,    0,         0,          0,           0,        -1 },
-	{ "Gimp",               NULL,     NULL,        	1 << 4,    0,         0,          0,           0,        -1 },
-	{ "Audacity",           NULL,     NULL,        	1 << 5,    0,         0,          0,           0,        -1 },
-	{ "kdenlive",           NULL,     NULL,        	1 << 6,    0,         0,          0,           0,        -1 },
-	{ "obs",                NULL,     NULL,        	1 << 6,    0,         0,          0,           0,        -1 },
-	{ "Nitrogen",           NULL,     NULL,        	0,         0,         1,          0,           0,        -1 },
-	{ "VirtualBox Manager",	NULL,     NULL,        	1 << 7,    0,         0,          0,           0,        -1 },
+	{ "st-256color",          NULL,     NULL,       0, 	   1,         0,          1,           0,        -1 },
+	{ "XTerm",        	  NULL,     NULL,       0, 	   1,         0,          1,           0,        -1 },
+	{ "Alacritty",        	  NULL,     NULL,       0, 	   1,         0,          1,           0,        -1 },
+	{ "URxvt",        	  NULL,     NULL,       0, 	   1,         0,          1,           0,        -1 },
+	{ "tabbed",        	  NULL,     NULL,       0, 	   1,         0,          1,           0,        -1 },
+	{ "Conky",                NULL,     NULL,       0, 	   0,         1,          0,           1,        -1 },
+	{ "Firefox",              NULL,     NULL,       1, 	   0,         0,          0,           0,        -1 },
+	{ "discord",              NULL,     NULL,       1 << 1,    0,         0,          0,           0,        -1 },
+	{ "Steam",                NULL,     NULL,       1 << 3,    0,         0,          0,           0,        -1 },
+	{ "Gimp",                 NULL,     NULL,       1 << 4,    0,         0,          0,           0,        -1 },
+	{ "Audacity",             NULL,     NULL,       1 << 5,    0,         0,          0,           0,        -1 },
+	{ "kdenlive",             NULL,     NULL,       1 << 6,    0,         0,          0,           0,        -1 },
+	{ "obs",                  NULL,     NULL,       1 << 6,    0,         0,          0,           0,        -1 },
+	{ "Nitrogen",             NULL,     NULL,       0,         0,         1,          0,           0,        -1 },
+	{ "SimpleScreenRecorder", NULL,     NULL,      	0,         0,         1,          0,           0,        -1 },
+	{ "VirtualBox Manager",	  NULL,     NULL,        	1 << 7,    0,         0,          0,           0,        -1 },
 	{ NULL,               NULL,     "Event Tester", 0,         0, 	      0,          0,           1,        -1 }, /* xev */
 };
 
