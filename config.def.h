@@ -63,8 +63,8 @@ static const char *colors[][3]      = {
 
 /* application autostart */
 static const char *const autostart[] = {
+	"conky", NULL,
 	"/home/rwt/.scripts/randomwall/randomwall.sh", NULL,
-	"conky", "--config", "/HOME/rwt/.config/conky/conky.conf", NULL,
 	"dunst", NULL,
 	"dwmblocks", NULL,
 	"picom", "--experimental-backends", NULL,
@@ -180,6 +180,7 @@ static const char *rson[] = { "redshift", "-P", "-O", "5000", NULL }; /* enable 
 static const char *rsoff[] = { "redshift", "-x", NULL }; /* enable redshift */
 static const char *cfgscript[] = { "/home/rwt/.config/dwm/scripts/config.sh", NULL }; /* config file selection menu */
 static const char *webscript[] = { "/home/rwt/.config/dwm/scripts/webfavs.sh", NULL }; /* favorite webpages menu */
+static const char *dunscript[] = { "/home/rwt/.config/dwm/scripts/dunst.sh", NULL }; /* dunstctl dmenu script */
 #include "movestack.c"
 
 /* key bindings */
@@ -194,6 +195,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_p,      spawn,	   {.v = favscript } },
 	{ MODKEY|ControlMask,		XK_v,      spawn,	   {.v = cfgscript } },
 	{ MODKEY|ControlMask,		XK_w,      spawn,	   {.v = webscript } },
+	{ MODKEY|ControlMask,		XK_z,      spawn,	   {.v = dunscript } },
 	{ MODKEY,			XK_e,      spawn,	   {.v = compon } },
 	{ MODKEY|ShiftMask,		XK_e,      spawn,	   {.v = compoff } },
 	{ MODKEY,			XK_n,      spawn,	   {.v = rson } },
