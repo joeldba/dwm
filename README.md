@@ -112,6 +112,7 @@ I've also included keybindings for my build of tabbed which can be found below t
 |Open config file selection menu (configurable via scripts/config.sh)|Mod+Ctrl+v|
 |Open screenshot/scrot menu|PrintScr|
 |Open power options menu|Mod+Ctrl+x|
+|Open dunstctl menu|Mod+Ctrl+z|
 |Move focus right|Mod+k|
 |Move focus left|Mod+j|
 |Move window right|Mod+Shift+K|
