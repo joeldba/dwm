@@ -47,7 +47,7 @@ static const char fg1[]       	    = "#3b4252";
 static const char fg2[]             = "#b48ead";
 static const char fg3[]             = "#81a1c1";
 static const char fg4[]             = "#e5e9f0";
-static const char fg5[]             = "#b3c7da";
+static const char fg5[]             = "#d9e3ec";
 static const char col_borderbar[]   = "#0f111a";
 
 /* color schemes */
