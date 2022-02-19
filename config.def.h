@@ -47,16 +47,25 @@ static const char fg1[]       	    = "#3b4252";
 static const char fg2[]             = "#b48ead";
 static const char fg3[]             = "#81a1c1";
 static const char fg4[]             = "#e5e9f0";
-static const char fg5[]             = "#d9e3ec";
 static const char col_borderbar[]   = "#0f111a";
+
+/* other colors (used in statusbar) */
+static const char red[]       	    = "#ff4151";
+static const char green[]           = "#a3be8c";
+static const char yellow[]          = "#ebcb8b";
+static const char blue[]       	    = "#81a1c1";
 
 /* color schemes */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] 	  = { fg3,    base1,    base1 },
 	[SchemeSel]  	  = { fg4,    base1,    base2 },
-	[SchemeStatus]    = { fg5,    base1,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { fg5,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeRed]       = { red,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeGreen]     = { green,  base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { fg3,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -68,7 +77,6 @@ static const char *const autostart[] = {
 	"dunst", NULL,
 	"dwmblocks", NULL,
 	"picom", "--experimental-backends", NULL,
-	"mpd", NULL,
 	NULL /* terminate */
 };
 
