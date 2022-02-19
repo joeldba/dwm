@@ -10,7 +10,7 @@ Applications
 	IMG:$HOME/.config/xmenu/icons/obs.png		OBS		obs	
 	IMG:$HOME/.config/xmenu/icons/kdenlive.png	Kdenlive	kdenlive
 	IMG:$HOME/.config/xmenu/icons/virtualbox.png	Virtualbox 	virtualbox
-	IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice	libreoffice7.3
+	IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice	libreoffice
 	IMG:$HOME/.config/xmenu/icons/ncmpcpp.png	Ncmpcpp		st -e ncmpcpp
 	IMG:$HOME/.config/xmenu/icons/vim.png		Vim		st -e vim
 Change wallpaper...	nitrogen

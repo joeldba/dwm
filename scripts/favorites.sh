@@ -5,7 +5,7 @@
 ###
 
 DMENU='dmenu -i -p favs'
-choice=$(echo -e "  firefox\n  discord\n  steam\n  minecraft\n  gzdoom\n  openarena\n  quakespasm\n  quake3\n  ecwolf\n  supertuxkart\n  eduke32\n  easytag\n  ncmpcpp\n  vim\n  libreoffice\n  gimp\n  audacity\n  kdenlive\n  obs-studio\n  virtualbox" | $DMENU | cut -f 1)
+choice=$(echo -e "  firefox\n  discord\n  steam\n  minecraft\n  gzdoom\n  openarena\n  quakespasm\n  quake3\n  ecwolf\n  supertuxkart\n  eduke32\n  ncmpcpp\n  vim\n  libreoffice\n  gimp\n  audacity\n  kdenlive\n  obs-studio\n  virtualbox" | $DMENU | cut -f 1)
 
 case "$choice" in
  "  firefox") firefox;;
@@ -15,14 +15,13 @@ case "$choice" in
  "  gzdoom") gzdoom;;
  "  openarena") openarena;;
  "  quakespasm") quakespasm ;;
- "  quake3") ioquake3 ;;
+ "  quake3") quake3 ;;
  "  ecwolf") ecwolf;;
  "  supertuxkart") supertuxkart;;
  "  eduke32") eduke32;;
- "  easytag") easytag;;
  "  ncmpcpp") st -e ncmpcpp;; 
  "  vim") st -e vim;;
- "  libreoffice") libreoffice7.3;;
+ "  libreoffice") libreoffice;;
  "  gimp") gimp;;
  "  audacity") audacity;;
  "  kdenlive") kdenlive;;
