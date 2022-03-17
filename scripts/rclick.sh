@@ -47,7 +47,7 @@ Open terminal...
 Kill window...		xkill
 
 dwm
-	Manual		st -e man dwm
+	Manual		st -e vim -R $HOME/.config/dwm/README.md
 	Edit config 	st -e vim $HOME/.config/dwm/config.h
 	Quit 		killall dwm
 
