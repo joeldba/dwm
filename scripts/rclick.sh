@@ -31,6 +31,11 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Calc	libreoffice --calc
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Draw	libreoffice --draw
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Impress	libreoffice --impress
+	Settings
+		Appearance Settings
+			GTK + Icon Settings	lxappearance
+			Qt Settings		kvantummanager
+		Volume Mixer	st -e pulsemixer
 Change wallpaper...	nitrogen
 
 Open terminal...
