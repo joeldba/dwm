@@ -10,8 +10,9 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/audacity.png	Audacity	audacity
 		IMG:$HOME/.config/xmenu/icons/obs.png		OBS		obs	
 		IMG:$HOME/.config/xmenu/icons/kdenlive.png	Kdenlive	kdenlive
-		IMG:$HOME/.config/xmenu/icons/virtualbox.png	Virtualbox 	virtualbox
 		IMG:$HOME/.config/xmenu/icons/ncmpcpp.png	Ncmpcpp		st -e ncmpcpp
+	Emulation
+		IMG:$HOME/.config/xmenu/icons/virtualbox.png	Virtualbox 	virtualbox
 	Games
 		IMG:$HOME/.config/xmenu/icons/doom.png		GZDoom			gzdoom
 		IMG:$HOME/.config/xmenu/icons/quake.png		Quake			quakespasm
