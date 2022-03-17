@@ -5,6 +5,7 @@ Applications
 	Accessories	
 		IMG:$HOME/.config/xmenu/icons/vim.png		Vim		st -e vim
 		IMG:$HOME/.config/xmenu/icons/ranger.png	Ranger		st -e ranger
+		IMG:$HOME/.config/xmenu/icons/calc.png		Calculator	xcalc
 	Audio + Video	
 		IMG:$HOME/.config/xmenu/icons/audacity.png	Audacity	audacity
 		IMG:$HOME/.config/xmenu/icons/obs.png		OBS		obs	
@@ -32,7 +33,7 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Draw	libreoffice --draw
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Impress	libreoffice --impress
 	Settings
-		Appearance Settings
+		Appearance
 			GTK + Icon Settings	lxappearance
 			Qt Settings		kvantummanager
 		Volume Mixer	st -e pulsemixer
