@@ -65,7 +65,7 @@ static const char *colors[][3]      = {
 	[SchemeYellow]    = { yellow, base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeBlue]      = { blue,   base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]    = { fg4,    base2,    "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeLayout]	  = { fg3,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
+	[SchemeLayout]	  = { fg4,    base1,	"#000000"  }, // Layout indicator {text,background,not used but cannot be empty}
         [SchemeInfoSel]   = { fg4,    base1,    "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
         [SchemeInfoNorm]  = { fg4,    base1,    "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
@@ -126,6 +126,7 @@ static const Rule rules[] = {
 	{ "kdenlive",             NULL,     NULL,       1 << 6,    0,         0,          0,           0,        -1 },
 	{ "obs",                  NULL,     NULL,       1 << 6,    0,         0,          0,           0,        -1 },
 	{ "Nitrogen",             NULL,     NULL,       0,         0,         1,          0,           0,        -1 },
+	{ "XCalc",             	  NULL,     NULL,       0,         0,         1,          0,           0,        -1 },
 	{ "SimpleScreenRecorder", NULL,     NULL,      	0,         0,         1,          0,           0,        -1 },
 	{ "VirtualBox Manager",	  NULL,     NULL,        	1 << 7,    0,         0,          0,           0,        -1 },
 	{ NULL,               NULL,     "Event Tester", 0,         0, 	      0,          0,           1,        -1 }, /* xev */
