@@ -27,7 +27,7 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/scrot.png		Scrot		scrot -s
 	Internet	
 		IMG:$HOME/.config/xmenu/icons/firefox.png	Firefox		firefox
-		IMG:$HOME/.config/xmenu/icons/web.png		Links		links
+		IMG:$HOME/.config/xmenu/icons/web.png		Links		st -e links
 		IMG:$HOME/.config/xmenu/icons/discord.png	Discord	        discord	
 		IMG:$HOME/.config/xmenu/icons/thunderbird.png	Thunderbird	thunderbird	
 		IMG:$HOME/.config/xmenu/icons/transmission.png	Transmission	transmission-gtk
