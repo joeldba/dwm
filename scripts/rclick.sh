@@ -26,8 +26,11 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/gimp.png		GIMP		gimp
 		IMG:$HOME/.config/xmenu/icons/scrot.png		Scrot		scrot -s
 	Internet	
-		IMG:$HOME/.config/xmenu/icons/web.png		Firefox		firefox
+		IMG:$HOME/.config/xmenu/icons/firefox.png	Firefox		firefox
+		IMG:$HOME/.config/xmenu/icons/web.png		Links		links
 		IMG:$HOME/.config/xmenu/icons/discord.png	Discord	        discord	
+		IMG:$HOME/.config/xmenu/icons/thunderbird.png	Thunderbird	thunderbird	
+		IMG:$HOME/.config/xmenu/icons/transmission.png	Transmission	transmission-gtk
 	Office
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Writer	libreoffice --writer
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Calc	libreoffice --calc
@@ -37,7 +40,8 @@ Applications
 		Appearance
 			GTK + Icon Settings	lxappearance
 			Qt Settings		kvantummanager
-		Volume Mixer	st -e pulsemixer
+		Volume Mixer		st -e pulsemixer
+		NVIDIA GPU Settings	nvidia-settings	
 Change wallpaper...	nitrogen
 
 Open terminal...
