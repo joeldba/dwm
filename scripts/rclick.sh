@@ -42,6 +42,7 @@ Applications
 			Qt Settings		kvantummanager
 		Volume Mixer		st -e pulsemixer
 		NVIDIA GPU Settings	nvidia-settings	
+		Compositor Settings	$HOME/.config/dwm/scripts/picom.sh	
 Change wallpaper...	nitrogen
 
 Open terminal...
