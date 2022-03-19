@@ -38,13 +38,12 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/libreoffice.png	LibreOffice Impress	libreoffice --impress
 	Settings
 		Appearance
-			GTK + Icon Settings	lxappearance
-			Qt Settings		kvantummanager
+			GTK + Icon Settings		lxappearance
+			Qt Settings			kvantummanager
+			Change Desktop Background	nitrogen
 		Volume Mixer		st -e pulsemixer
 		NVIDIA GPU Settings	nvidia-settings	
-		Compositor Settings	$HOME/.config/dwm/scripts/picom.sh	
-Change wallpaper...	nitrogen
-
+		Compositor Settings	$HOME/.config/dwm/scripts/picom.sh
 Open terminal...
 	st	st
 	st (tabbed)	tabbed -c -r 2 st -w ''
