@@ -6,6 +6,8 @@ Applications
 		IMG:$HOME/.config/xmenu/icons/vim.png		Vim		st -e vim
 		IMG:$HOME/.config/xmenu/icons/ranger.png	Ranger		st -e ranger
 		IMG:$HOME/.config/xmenu/icons/calc.png		Calculator	xcalc
+		IMG:$HOME/.config/xmenu/icons/htop.png		HTop		st -e htop
+		IMG:$HOME/.config/xmenu/icons/bleachbit.png	BleachBit	bleachbit
 	Audio + Video	
 		IMG:$HOME/.config/xmenu/icons/audacity.png	Audacity	audacity
 		IMG:$HOME/.config/xmenu/icons/obs.png		OBS		obs	
@@ -51,6 +53,7 @@ Open terminal...
 	urxvt		urxvt
 	xterm		xterm
 Kill window...		xkill
+Run...			dmenu_run
 
 dwm
 	Manual		st -e vim -R $HOME/.config/dwm/README.md
